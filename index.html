@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!--Llamada para los iconos-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <title>App del tiempo - DWEC06</title>
+</head>
+
+<body>
+    <div class="contenedor">
+
+        <!--Panel con los datos principales-->
+        <div class="principal">
+            <div class="gradiente"></div>
+            <div class="datos-principal">
+                <h2 class="dia-semana"></h2>
+                <span class="fecha"></span>
+                <span class="entrada-localidad">
+                    <input class="localidad" id="localidad" type="text" placeholder="Localidad...   (ej.: París, FR)" />
+                </span>
+                <div id="error">No has introducido una localidad válida</div>
+            </div>
+
+            <div class="tiempo-principal">
+                <i id="icono-principal" class=""></i>
+                <h1 class="estado-actual"></h1>
+                <h3 class="estado-indicativo"></h3>
+            </div>
+        </div>
+        
+        <!--Panel con los demás datos, la previsión para los próximos 3 días y los botones-->
+        <div class="info">
+
+            <div class="info-contenedor">
+                <div class="info-actual">
+                    <div class="dato1">
+                        <span class="titulo"></span>
+                        <span class="valor"></span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="dato2">
+                        <span class="titulo"></span>
+                        <span class="valor"></span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="dato3">
+                        <span class="titulo"></span>
+                        <span class="valor"></span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="dato4">
+                        <span class="titulo"></span>
+                        <span class="valor"></span>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-semana">
+                <ul class="lista-semana">
+                    <li class="active">
+                        <i id="icono-diario1"></i>
+                        <span class="nombre-dia"></span>
+                        <span class="dato-diario"></span>
+                    </li>
+                    <li>
+                        <i id="icono-diario2"></i>
+                        <span class="nombre-dia"></span>
+                        <span class="dato-diario"></span>
+                    </li>
+                    <li>
+                        <i id="icono-diario3"></i>
+                        <span class="nombre-dia"></span>
+                        <span class="dato-diario"></span>
+                    </li>
+                    <li>
+                        <i id="icono-diario4"></i>
+                        <span class="nombre-dia"></span>
+                        <span class="dato-diario"></span>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+
+            <div class="botones">
+                <button id="boton-tiempo" class="boton">
+                    <i class="wi wi-day-cloudy"></i>
+                    <span>Tiempo</span>
+                </button>
+                <button id="boton-contaminacion" class="boton">
+                    <i class="wi wi-smoke"></i>
+                    <span>Contaminación</span>
+                </button>                
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<!--Llamadas de scripts (incluido jquery)-->
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>
